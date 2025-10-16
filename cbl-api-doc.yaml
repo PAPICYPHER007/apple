@@ -1,0 +1,5918 @@
+openapi: 3.0.1
+info:
+  title: CBL API
+  description: '# Welcome to the CBL API Docs
+
+
+    This documentation provides details on how to use the **CBL API** for managing
+    accounts and transactions.
+
+
+    The API Platform leverages the bank’s regulatory licenses to securely expose services
+    including account operations, payments, mobile money, and core banking functions.
+    All APIs follow the REST paradigm and are served via HTTPS, with payloads returned
+    in JSON. Where applicable, ISO-standard responses are supported, particularly
+    for CBS (Core Banking System) integrations.
+
+
+    Use the sidebar to explore the available endpoints.'
+  version: 1.0.0
+  termsOfService: https://example.com/terms
+  contact:
+    name: API Support
+    url: https://github.com/hyveglobal/CBLGatewayDocs
+    email: support@example.com
+  license:
+    name: MIT
+    url: https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide
+paths:
+  /api/v1/corebanking/standingorderexternal:
+    post:
+      tags:
+      - Accounts
+      operationId: Cbl Core Banking Usecases Accounts Standing Order External Standing Order External Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StandingOrderExternalRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandingOrderExternalResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/kyc:
+    post:
+      tags:
+      - Accounts
+      operationId: Cbl Core Banking Usecases Accounts KYC Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/KYCRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KYCResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/forex:
+    post:
+      tags:
+      - Accounts
+      operationId: Cbl Core Banking Usecases Accounts Forex Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ForexRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForexResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/balanceinquiry:
+    post:
+      tags:
+      - Accounts
+      operationId: Cbl Core Banking Usecases Accounts Balance Inquiry Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BalanceInquiryRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BalanceInquiryResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/ameyo:
+    post:
+      tags:
+      - Accounts
+      operationId: Cbl Core Banking Usecases Accounts Ameyo Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AmeyoRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AmeyoResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/aliascreation:
+    post:
+      tags:
+      - Accounts
+      operationId: Cbl Core Banking Usecases Accounts Alias Creation Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AliasCreationRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AliasCreationResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/accountstatement:
+    post:
+      tags:
+      - Accounts
+      operationId: Cbl Core Banking Usecases Account Statement Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountStatementRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountStatementResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/accountopening:
+    post:
+      tags:
+      - Accounts
+      operationId: Cbl Core Banking Usecases Accounts. Account Opening Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountOpeningRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountOpeningResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/accountenquiry:
+    post:
+      tags:
+      - Accounts
+      operationId: Cbl Core Banking Usecases Accounts. Account Enquiry Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountEnquiryRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountEnquiryResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/cancelstandingorder:
+    post:
+      tags:
+      - Cancel Standing Order
+      operationId: Cbl Core Banking Usecases Accounts Cancel Standing Order Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CancelStandingOrderRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CancelStandingOrderResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/health:
+    get:
+      tags:
+      - Cbl.Web.Api
+      operationId: Cbl Core Banking Health Check Endpoint
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema: {}
+            application/json:
+              schema: {}
+  /api/v1/integration:
+    get:
+      tags:
+      - Cbl.Web.Api
+      operationId: Cbl Integrations Health Check Endpoint
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema: {}
+            application/json:
+              schema: {}
+  /api/v1/notification/create:
+    post:
+      tags:
+      - Cbl.Web.Api
+      operationId: Cbl Notifications Usecases Create Notification Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateNotificationRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateNotificationResponseResult'
+  /health:
+    get:
+      tags:
+      - Core Admin
+      responses:
+        '200':
+          description: OK
+  /ops/recons/download/{artifactId}:
+    get:
+      tags:
+      - Core Admin
+      parameters:
+      - name: artifactId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+  /ops/postings/{groupId}/instructions/{id}/retry:
+    post:
+      tags:
+      - Core Admin
+      parameters:
+      - name: groupId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      responses:
+        '200':
+          description: OK
+  /ops/postings/{planId}/fx/retry:
+    post:
+      tags:
+      - Core Admin
+      parameters:
+      - name: planId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      responses:
+        '200':
+          description: OK
+  /ops/plans/{planId}/reverse:
+    post:
+      tags:
+      - Core Admin
+      parameters:
+      - name: planId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: reason
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: mode
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: scope
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+  /ops/plans/{planId}/reverse/promote:
+    post:
+      tags:
+      - Core Admin
+      parameters:
+      - name: planId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      responses:
+        '200':
+          description: OK
+  /ops/plans/{planId}/reconcile:
+    post:
+      tags:
+      - Core Admin
+      parameters:
+      - name: planId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      responses:
+        '200':
+          description: OK
+  /api/v1/integration/imt/maketransfer:
+    post:
+      tags:
+      - IMT
+      operationId: Cbl Integrations Usecases Payments IMT Transfer Initiate Transfer Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InitiateTransferRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IMTdResponse'
+  /api/v1/integration/imt/validate:
+    post:
+      tags:
+      - IMT
+      operationId: Cbl Integrations Usecases Payments IMT Initiate Payment Validation Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InitiatePaymentValidationRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IMTdResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/ipslmerchant/transaction/validate:
+    post:
+      tags:
+      - IPSLMerchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Transaction. Validate Transaction Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ValidateTransactionRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidateTransactionResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/ipslmerchant/transaction/perform-async:
+    post:
+      tags:
+      - IPSLMerchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Transaction. Perform Async Transaction Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PerformAsyncTransactionRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PerformAsyncTransactionResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/ipslmerchant/transaction/status:
+    post:
+      tags:
+      - IPSLMerchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Transaction. Get Transaction Status Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetTransactionStatusRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetTransactionStatusResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/ipslmerchant/transaction/calculate-fee:
+    post:
+      tags:
+      - IPSLMerchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Transaction Calculate Fee Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CalculateFeeRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CalculateFeeResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/ipslmerchant/transaction/calculate-fee-extended:
+    post:
+      tags:
+      - IPSLMerchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Transaction Calculate Fee Extended Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CalculateFeeExtendedRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CalculateFeeExtendedResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/ipslmerchant/manage/merchant/lookup/{reference}/{tillnumber}:
+    get:
+      tags:
+      - IPSLMerchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Manage Lookup Merchant Endpoint
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/LookupMerchantRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LookupMerchantRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LookupMerchantResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/ipslmerchant/manage/merchant/enable:
+    post:
+      tags:
+      - IPSLMerchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Manage Enable Merchant Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EnableMerchantRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Result'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/ipslmerchant/manage/merchant/edit:
+    post:
+      tags:
+      - IPSLMerchant
+      operationId: CblIntegrationsUsecasesPaymentsIPSLMerchantManageEditMerchantEditMerchantEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EditMerchantRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Result'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/ipslmerchant/manage/merchant/disable:
+    post:
+      tags:
+      - IPSLMerchant
+      operationId: CblIntegrationsUsecasesPaymentsIPSLMerchantManageDisableMerchantDisableMerchantEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DisableMerchantRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Result'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/ipslmerchant/manage/merchant/delete:
+    post:
+      tags:
+      - IPSLMerchant
+      operationId: CblIntegrationsUsecasesPaymentsIPSLMerchantManageDeleteMerchantDeleteMerchantEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteMerchantRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Result'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/ipslmerchant/manage/merchant/create:
+    post:
+      tags:
+      - IPSLMerchant
+      operationId: CblIntegrationsUsecasesPaymentsIPSLMerchantManageCreateMerchantCreateMerchantEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateMerchantRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Result'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/reversal:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMpesaInitiateTransactionReversalInitiateTransactionReversalEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InitiateTransactionReversalRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MpesaResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/qrcode/withdrawcash:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMpesaGenerateQRCodeWithdrawCashWithdrawCashQRCodeEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WithdrawCashQRCodeRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerateQRCodeResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/qrcode/mobilemoney:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMpesaGenerateQRCodeSendMobileMoneySendMobileMoneyQRCodeEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SendMobileMoneyQRCodeRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerateQRCodeResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/qrcode/business:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMpesaGenerateQRCodeSendBusinessSendBusinessQRCodeEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SendBusinessQRCodeRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerateQRCodeResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/qrcode/paybill:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMpesaGenerateQRCodePayBillPayBillQRCodeEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PayBillQRCodeRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerateQRCodeResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/qrcode/buygoods:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMpesaGenerateQRCodeBuyGoodsBuyGoodsQRCodeEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BuyGoodsQRCodeRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerateQRCodeResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/statuscheck/paybill:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMPESAInitiateTransactionStatusCheckPayBillPayBillTransactionStatusCheckEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PayBillTransactionStatusCheckRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MpesaResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/statuscheck/mobilemoney:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMPESAInitiateTransactionStatusCheckMobileMoneyMobileMoneyTransactionStatusCheckEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MobileMoneyTransactionStatusCheckRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MpesaResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/statuscheck/buygoods:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMPESAInitiateTransactionStatusCheckBuyGoodsBuyGoodsTransactionStatusCheckEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BuyGoodsTransactionStatusCheckRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MpesaResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/b2c:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMPESAInitiateB2CPaymentInitiateB2CPaymentEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InitiateB2CPaymentRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MpesaResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/b2b/expresscheckout:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMPESAInitiateB2BExpressCheckoutInitiateB2BExpressCheckoutEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InitiateB2BExpressCheckoutRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InitiateB2BExpressCheckoutResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/b2b/paybill:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMPESAB2BPaymentsPayBillPayBillEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PayBillRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MpesaResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/b2b/buygoods:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMPESAB2BPaymentsBuyGoodsBuyGoodsEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BuyGoodsRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MpesaResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/b2b/accounttopup:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMPESAB2BPaymentsAccountTopUpAccountTopUpEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountTopUpRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MpesaResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/accountbalance/paybill:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMPESAAccountBalanceInquiryPayBillPayBillEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountBalancePayBillRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MpesaResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/accountbalance/mobilemoney:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMPESAAccountBalanceInquiryMobileMoneyMobileMoneyEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountBalanceMobileMoneyRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MpesaResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/mpesa/accountbalance/buygoods:
+    post:
+      tags:
+      - Mpesa
+      operationId: CblIntegrationsUsecasesMobileMoneyMPESAAccountBalanceInquiryBuyGoodsBuyGoodsEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountBalanceInquiryBuyGoodsRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MpesaResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/networking:
+    post:
+      tags:
+      - Networking
+      operationId: CblCoreBankingUsecasesNetworkingNetworkingEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NetworkingRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NetworkingResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/pesaflow/payment/validate:
+    post:
+      tags:
+      - Pesaflows
+      operationId: CblIntegrationsUsecasesPaymentsPesaflowsValidatePaymentValidatePaymentEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ValidatePaymentRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Result'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/pesaflow/payment/confirm:
+    post:
+      tags:
+      - Pesaflows
+      operationId: CblIntegrationsUsecasesPaymentsPesaflowsConfirmPaymentConfirmPaymentEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConfirmPaymentRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Result'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/pesaflow/payment/statuscheck/{reference}/{currency}:
+    get:
+      tags:
+      - Pesaflows
+      operationId: CblIntegrationsUsecasesPaymentsPesaflowsCheckPaymentStatusCheckPaymentStatusEndpoint
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/CheckPaymentStatusRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CheckPaymentStatusRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentStatusResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/pesalink/systemnotification:
+    post:
+      tags:
+      - Pesalink
+      operationId: CblIntegrationsUsecasesSendMoneyPesalinkTransactionsSystemNotificationSystemNotificationEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SystemNotificationRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SystemNotificationResponseResult'
+  /api/v1/integration/pesalink/paymentreversal:
+    post:
+      tags:
+      - Pesalink
+      operationId: CblIntegrationsUsecasesSendMoneyPesalinkTransactionsPaymentReversalPaymentReversalEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentReversalRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentReversalResponseResult'
+  /api/v1/integration/pesalink/paymentcancellation:
+    post:
+      tags:
+      - Pesalink
+      operationId: CblIntegrationsUsecasesSendMoneyPesalinkTransactionsPaymentCancellationPaymentCancellationEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentCancellationRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentCancellationResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/pesalink/paymentactivation:
+    post:
+      tags:
+      - Pesalink
+      operationId: CblIntegrationsUsecasesSendMoneyPesalinkTransactionsPaymentActivationPaymentActivationEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentActivationRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentActivationResponseResult'
+  /api/v1/integration/pesalink/gettransactionrequeststatus:
+    post:
+      tags:
+      - Pesalink
+      operationId: CblIntegrationsUsecasesSendMoneyPesalinkTransactionsGetTransactionRequestStatusGetTransactionRequestStatusEndpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetTransactionRequestStatusRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetTransactionRequestStatusResponseResult'
+  /api/v1/integration/pesalink/customercredittransfer:
+    post:
+      tags:
+      - Pesalink
+      operationId: Cbl Integrations Usecases Send Money Pesalink Transactions Customer Credit Transfer Request Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerCreditTransferRequests'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerCreditTransferResponseResult'
+  /api/v1/integration/pesalink/bulkcustomercredittransfer:
+    post:
+      tags:
+      - Pesalink
+      operationId: Cbl Integrations Usecases Send Money PesalinkTransactions Bulk Bank To Bank Customer Credit Transfer Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BulkBankToBankCustomerCreditTransferRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BulkBankToBankCustomerCreditTransferResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/pesalink/banktobankcustomercredittransfer:
+    post:
+      tags:
+      - Pesalink
+      operationId: Cbl Integrations Usecases Send Money Pesalink Transactions Bank To Bank Customer Credit Transfer Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BankToBankCustomerCreditTransferRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BankToBankCustomerCreditTransferResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/pesalink/accountverification:
+    post:
+      tags:
+      - Pesalink
+      operationId: Cbl Integrations Usecases Send Money Pesalink Transactions Account Verification Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountVerificationRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountVerificationResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/pesalink/updatecustomer:
+    post:
+      tags:
+      - Pesalink
+      operationId: Cbl Integrations Usecases Send Money Pesa link Onboarding Update Customer Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCustomerRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OnboardingResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/pesalink/registercustomer:
+    post:
+      tags:
+      - Pesalink
+      operationId: Cbl Integrations Usecases Send Money Pesalink Onboarding Register Customer Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterCustomerRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OnboardingResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/pesalink/deletecustomer:
+    post:
+      tags:
+      - Pesalink
+      operationId: Cbl Integrations Usecases Send Money Pesalink Onboarding Delete Customer Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteCustomerRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OnboardingResponseResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/integration/pesalink/getcustomerbanklist/{reference}/{phonenumber}:
+    get:
+      tags:
+      - Pesalink
+      operationId: Cbl Integrations Usecases Send Money Pesalink Lookups Get Customer Bank List Endpoint
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/GetCustomerBankListRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetCustomerBankListRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCustomerBankListResponseResult'
+  /api/v1/integration/safaricom/checkati:
+    post:
+      tags:
+      - Safaricom
+      operationId: Cbl Integrations Usecases Telcos Safaricom Check ATI Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CheckATIRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckATIResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/transactionreversal:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl Core Banking Usecases Transactions Transaction Reversal Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransactionReversalRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionReversalResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/transactionposting:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl Core Banking Usecases Transactions Transaction Posting Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransactionPostingRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionPostingResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/transactionenquiry:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl Core Banking Usecases Transactions Transaction Enquiry Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransactionEnquiryRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionEnquiryResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/rtgstransaction:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl Core Banking Usecases Transactions Rtgs Transaction Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RtgsTransactionRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RtgsTransactionResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/pesalinktobank:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl Core Banking Usecases Transactions Pesalink To Bank Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PesalinkToBankRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PesalinkToBankResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/pesalinktobankinitiator:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl CoreBanking Usecases Transactions Pesalink To Bank Initiator Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PesalinkToBankInitiatorRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PesalinkToBankInitiatorResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/pesalinktobankincoming:
+    post:
+      tags:
+      - Transactions
+      operationId: CblCore Banking Usecases Transactions Pesalink To Bank Incoming Incoming Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PesalinkToBankIncomingRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PesalinkToBankIncomingResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/paybiller:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl Core Banking Usecases Transactions Pay Biller Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PayBillerRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PayBillerResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/mpesab2c:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl Core Banking Usecases Transactions Mpesa B2C Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MpesaB2CRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MpesaB2CResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/mpesab2b:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl Core Banking Usecases Transactions Mpesa B2B Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MpesaB2BRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MpesaB2BResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/k2btransaction:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl Core Banking Usecases Transactions K2B Transaction Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/K2BTransactionRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/K2BTransactionResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/internaltransfer:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl Core Banking Usecases Transactions Internal Transfer Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InternalTransferRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalTransferResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/billersinternaltransfer:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl Core Banking Usecases Transactions Billers Internal Transfer Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BillersInternalTransferRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BillersInternalTransferResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/airtelb2c:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl Core Banking Usecases Transactions Airtel B2C Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AirtelB2CRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AirtelB2CResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/corebanking/accounttoaccountfundstransfer:
+    post:
+      tags:
+      - Transactions
+      operationId: Cbl Core-Banking Usecases Transactions Account To Account Funds Transfer Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountToAccountFundsTransferRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountToAccountFundsTransferResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /generate-link:
+    get:
+      tags:
+      - Webhooks
+      responses:
+        '200':
+          description: OK
+  /api/v1/webhooks/confirm/{event}/{id}:
+    post:
+      tags:
+      - Webhooks
+      operationId: Cbl Webhooks Usecases Send Money MPESA Process C2B Payment Confirm Payment Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProcessC2BPaymentRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProcessC2BPaymentResponse'
+  /api/v1/webhooks/validate/{event}/{id}:
+    post:
+      tags:
+      - Webhooks
+      operationId: Cbl Webhooks Usecases Send Money MPESA Process C2B Payment Validate Payment Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProcessC2BPaymentRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProcessC2BPaymentResponse'
+  /api/v1/webhooks/pub-events/{event}/{id}:
+    post:
+      tags:
+      - Webhooks
+      operationId: Cbl Webhooks Usecases Process Webhook Process Webhook Endpoint
+      requestBody:
+        content:
+          text/plain:
+            schema:
+              $ref: '#/components/schemas/ProcessWebhookRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProcessWebhookRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema: {}
+            application/json:
+              schema: {}
+  /api/v1/webhooks/ipn-url:
+    get:
+      tags:
+      - Webhooks
+      operationId: Cbl Webhooks Usecases Get Ipn Webhook Url Endpoint
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema: {}
+            application/json:
+              schema: {}
+  /api/v1/webhooks/generate-url:
+    post:
+      tags:
+      - Webhooks
+      operationId: Cbl Webhooks Usecases Generate Webhook Url Endpoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerateWebhookUrlRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerateWebhookUrlResponse'
+        '400':
+          description: Bad Request
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerateWebhookUrlResponse'
+components:
+  schemas:
+    AccountBalanceInquiryBuyGoodsRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        remarks:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AccountBalanceMobileMoneyRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        remarks:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AccountBalancePayBillRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        remarks:
+          type: string
+          nullable: true
+        billerCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AccountEnquiryRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AccountEnquiryResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        accountName:
+          type: string
+          nullable: true
+        currency:
+          type: string
+          nullable: true
+        customerId:
+          type: string
+          nullable: true
+        balance:
+          type: number
+          format: double
+        phoneNumbers:
+          type: array
+          items:
+            type: string
+          nullable: true
+        accountStatus:
+          type: string
+          nullable: true
+        accountType:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AccountOpeningRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        customerId:
+          type: string
+          nullable: true
+        accountType:
+          type: string
+          nullable: true
+        firstName:
+          type: string
+          nullable: true
+        lastName:
+          type: string
+          nullable: true
+        email:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+        documentNumber:
+          type: string
+          nullable: true
+        documentType:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AccountOpeningResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        accountType:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AccountStatementItem:
+      type: object
+      properties:
+        openingBalance:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+        accountCurrency:
+          type: string
+          nullable: true
+        bookingDate:
+          type: string
+          nullable: true
+        valueDate:
+          type: string
+          nullable: true
+        currency:
+          type: string
+          nullable: true
+        amount:
+          type: string
+          nullable: true
+        reference:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        chequeNo:
+          type: string
+          nullable: true
+        transactionCode:
+          type: string
+          nullable: true
+        accountTitle1:
+          type: string
+          nullable: true
+        accountTitle2:
+          type: string
+          nullable: true
+        shortTitle:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AccountStatementRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+      additionalProperties: false
+    AccountStatementResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/AccountStatementItem'
+          nullable: true
+      additionalProperties: false
+    AccountToAccountFundsTransferRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        sourceAccountNumber:
+          type: string
+          nullable: true
+        destinationAccountNumber:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+      additionalProperties: false
+    AccountToAccountFundsTransferResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        sourceAccountBalance:
+          type: number
+          format: double
+        destinationAccountBalance:
+          type: number
+          format: double
+      additionalProperties: false
+    AccountTopUpRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        remarks:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+        accountReference:
+          type: string
+          nullable: true
+        coreBankingTransactionId:
+          type: string
+          nullable: true
+        billerCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AccountVerificationRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        sourceInstitutionId:
+          type: string
+          nullable: true
+        destinationInstitutionId:
+          type: string
+          nullable: true
+        processorInstitutionId:
+          type: string
+          nullable: true
+        verificationId:
+          type: string
+          nullable: true
+        accountId:
+          type: string
+          nullable: true
+        bankCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AccountVerificationResponse:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        creationDateTime:
+          type: string
+          nullable: true
+        firstAgentId:
+          type: string
+          nullable: true
+        assignerAgentId:
+          type: string
+          nullable: true
+        assigneeAgentId:
+          type: string
+          nullable: true
+        originalMessageId:
+          type: string
+          nullable: true
+        originalCreationDateTime:
+          type: string
+          nullable: true
+        originalFirstAgentId:
+          type: string
+          nullable: true
+        originalId:
+          type: string
+          nullable: true
+        verification:
+          type: boolean
+        reasonProprietary:
+          type: string
+          nullable: true
+        reasonCode:
+          type: string
+          nullable: true
+        originalAccountId:
+          type: string
+          nullable: true
+        originalAccountAgentId:
+          type: string
+          nullable: true
+        accountName:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+        updatedAccountScheme:
+          type: string
+          nullable: true
+        updatedAccountAgentId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AccountVerificationResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/AccountVerificationResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    AirtelB2CRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+      additionalProperties: false
+    AirtelB2CResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AliasCreationRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        alias:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AliasCreationResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        aliasStatus:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AlternativeChannel:
+      type: object
+      properties:
+        pspIdentifier:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AmeyoRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AmeyoResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        customerStatus:
+          type: string
+          nullable: true
+      additionalProperties: false
+    BalanceInquiryRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    BalanceInquiryResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        availableBalance:
+          type: number
+          format: double
+        bookBalance:
+          type: number
+          format: double
+      additionalProperties: false
+    BankToBankCustomerCreditTransferRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        settlementMethod:
+          type: string
+          nullable: true
+        clearingSystem:
+          type: string
+          nullable: true
+        transactionType:
+          type: string
+          nullable: true
+        instrumentCode:
+          type: string
+          nullable: true
+        initiatingChannel:
+          type: string
+          nullable: true
+        instructingAgentId:
+          type: string
+          nullable: true
+        instructedAgentId:
+          type: string
+          nullable: true
+        sendToMobilePhone:
+          type: boolean
+        sendToWallet:
+          type: boolean
+        amount:
+          type: number
+          format: double
+        amountCurrency:
+          type: string
+          nullable: true
+        acceptanceDateTime:
+          type: string
+          nullable: true
+        chargeBearer:
+          type: string
+          nullable: true
+        initiatingPartyOrgId:
+          type: string
+          nullable: true
+        senderName:
+          type: string
+          nullable: true
+        customerDebtorOrganizationId:
+          type: string
+          nullable: true
+        senderPhoneNumber:
+          type: string
+          nullable: true
+        senderAccountId:
+          type: string
+          nullable: true
+        senderAccountName:
+          type: string
+          nullable: true
+        sourceBankId:
+          type: string
+          nullable: true
+        beneficiaryBankId:
+          type: string
+          nullable: true
+        beneficiaryName:
+          type: string
+          nullable: true
+        beneficiaryPhone:
+          type: string
+          nullable: true
+        beneficiaryAccountId:
+          type: string
+          nullable: true
+        beneficiaryAccountName:
+          type: string
+          nullable: true
+        purposeCode:
+          type: string
+          nullable: true
+        narration:
+          type: string
+          nullable: true
+      additionalProperties: false
+    BankToBankCustomerCreditTransferResponse:
+      type: object
+      properties:
+        messageId:
+          type: string
+          nullable: true
+        creationDateTime:
+          type: string
+          nullable: true
+        instructingAgentId:
+          type: string
+          nullable: true
+        instructedAgentId:
+          type: string
+          nullable: true
+        originalMessageId:
+          type: string
+          nullable: true
+        originalMessageNameId:
+          type: string
+          nullable: true
+        originalCreationDateTime:
+          type: string
+          nullable: true
+        statusId:
+          type: string
+          nullable: true
+        originalEndToEndId:
+          type: string
+          nullable: true
+        transactionStatus:
+          type: string
+          nullable: true
+        statusReasonCode:
+          type: string
+          nullable: true
+        statusReasonProprietary:
+          type: string
+          nullable: true
+        acceptanceDateTime:
+          type: string
+          nullable: true
+        settlementAmount:
+          type: number
+          format: double
+          nullable: true
+        settlementCurrency:
+          type: string
+          nullable: true
+        requestedExecutionDateTime:
+          type: string
+          nullable: true
+        settlementMethod:
+          type: string
+          nullable: true
+        clearingSystemProprietary:
+          type: string
+          nullable: true
+        paymentTypeServiceLevel:
+          type: string
+          nullable: true
+        paymentTypeLocalInstrument:
+          type: string
+          nullable: true
+        paymentTypeCategoryPurpose:
+          type: string
+          nullable: true
+        mandateId:
+          type: string
+          nullable: true
+        remittanceUnstructured:
+          type: string
+          nullable: true
+        remittanceCreditorReference:
+          type: string
+          nullable: true
+        ultimateDebtorName:
+          type: string
+          nullable: true
+        debtorName:
+          type: string
+          nullable: true
+        debtorAccountId:
+          type: string
+          nullable: true
+        debtorAgentId:
+          type: string
+          nullable: true
+        creditorAgentId:
+          type: string
+          nullable: true
+        creditorName:
+          type: string
+          nullable: true
+        creditorAccountId:
+          type: string
+          nullable: true
+        ultimateCreditorName:
+          type: string
+          nullable: true
+        purposeCode:
+          type: string
+          nullable: true
+        statusOriginatorNames:
+          type: array
+          items:
+            type: string
+          nullable: true
+      additionalProperties: false
+    BankToBankCustomerCreditTransferResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/BankToBankCustomerCreditTransferResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    BillersInternalTransferRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        sourceAccount:
+          type: string
+          nullable: true
+        destinationAccount:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        billerCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    BillersInternalTransferResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    BulkBankToBankCustomerCreditTransferRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        creationDateTime:
+          type: string
+          nullable: true
+        numberOfTransactions:
+          type: integer
+          format: int32
+        totalSettlementAmountCurrency:
+          type: string
+          nullable: true
+        totalSettlementAmount:
+          type: number
+          format: double
+        settlementMethod:
+          type: string
+          nullable: true
+        clearingSystem:
+          type: string
+          nullable: true
+        transactionType:
+          type: string
+          nullable: true
+        instrumentCode:
+          type: string
+          nullable: true
+        initiatingChannel:
+          type: string
+          nullable: true
+        instructingAgentId:
+          type: string
+          nullable: true
+        instructedAgentId:
+          type: string
+          nullable: true
+        transactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/BulkFundsTransferTransactionItem'
+          nullable: true
+      additionalProperties: false
+    BulkBankToBankCustomerCreditTransferResponse:
+      type: object
+      properties:
+        messageId:
+          type: string
+          nullable: true
+        creationDateTime:
+          type: string
+          nullable: true
+        instructingAgentId:
+          type: string
+          nullable: true
+        instructedAgentId:
+          type: string
+          nullable: true
+        originalMessageId:
+          type: string
+          nullable: true
+        originalMessageNameId:
+          type: string
+          nullable: true
+        originalCreationDateTime:
+          type: string
+          nullable: true
+        transactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/BulkTransactionStatusFlat'
+          nullable: true
+      additionalProperties: false
+    BulkBankToBankCustomerCreditTransferResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/BulkBankToBankCustomerCreditTransferResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    BulkFundsTransferTransactionItem:
+      type: object
+      properties:
+        paymentId:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+        endToEndId:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        amountCurrency:
+          type: string
+          nullable: true
+        acceptanceDateTime:
+          type: string
+          nullable: true
+        chargeBearer:
+          type: string
+          nullable: true
+        mandateId:
+          type: string
+          nullable: true
+        ultimateDebtorName:
+          type: string
+          nullable: true
+        ultimateDebtorPhone:
+          type: string
+          nullable: true
+        initiatingPartyOrgId:
+          type: string
+          nullable: true
+        senderName:
+          type: string
+          nullable: true
+        debtorOrgId:
+          type: string
+          nullable: true
+        senderPhoneNumber:
+          type: string
+          nullable: true
+        senderAccountId:
+          type: string
+          nullable: true
+        debtorAccountName:
+          type: string
+          nullable: true
+        sourceBankId:
+          type: string
+          nullable: true
+        beneficiaryBankId:
+          type: string
+          nullable: true
+        beneficiaryName:
+          type: string
+          nullable: true
+        creditorOrgId:
+          type: string
+          nullable: true
+        beneficiaryPhoneNumber:
+          type: string
+          nullable: true
+        beneficiaryAccountId:
+          type: string
+          nullable: true
+        beneficiaryAccountName:
+          type: string
+          nullable: true
+        ultimateCreditorName:
+          type: string
+          nullable: true
+        ultimateCreditorPhone:
+          type: string
+          nullable: true
+        purposeCode:
+          type: string
+          nullable: true
+        narration:
+          type: string
+          nullable: true
+        structuredRemittanceReference:
+          type: string
+          nullable: true
+        taxCreditorId:
+          type: string
+          nullable: true
+        taxDebtorId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    BulkTransactionStatusFlat:
+      type: object
+      properties:
+        statusId:
+          type: string
+          nullable: true
+        originalEndToEndId:
+          type: string
+          nullable: true
+        transactionStatus:
+          type: string
+          nullable: true
+        statusReasonCode:
+          type: string
+          nullable: true
+        statusReasonProprietary:
+          type: string
+          nullable: true
+        acceptanceDateTime:
+          type: string
+          nullable: true
+        settlementAmount:
+          type: number
+          format: double
+          nullable: true
+        settlementCurrency:
+          type: string
+          nullable: true
+        requestedExecutionDateTime:
+          type: string
+          nullable: true
+        settlementMethod:
+          type: string
+          nullable: true
+        clearingSystemProprietary:
+          type: string
+          nullable: true
+        paymentTypeServiceLevel:
+          type: string
+          nullable: true
+        paymentTypeLocalInstrument:
+          type: string
+          nullable: true
+        paymentTypeCategoryPurpose:
+          type: string
+          nullable: true
+        mandateId:
+          type: string
+          nullable: true
+        remittanceUnstructured:
+          type: string
+          nullable: true
+        remittanceCreditorReference:
+          type: string
+          nullable: true
+        ultimateDebtorName:
+          type: string
+          nullable: true
+        debtorName:
+          type: string
+          nullable: true
+        debtorAccountId:
+          type: string
+          nullable: true
+        debtorAgentId:
+          type: string
+          nullable: true
+        creditorAgentId:
+          type: string
+          nullable: true
+        creditorName:
+          type: string
+          nullable: true
+        creditorAccountId:
+          type: string
+          nullable: true
+        ultimateCreditorName:
+          type: string
+          nullable: true
+        purposeCode:
+          type: string
+          nullable: true
+        statusOriginatorNames:
+          type: array
+          items:
+            type: string
+          nullable: true
+      additionalProperties: false
+    BuyGoodsQRCodeRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        size:
+          type: integer
+          format: int32
+        amount:
+          type: integer
+          format: int64
+        merchantName:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    BuyGoodsRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        remarks:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+        accountReference:
+          type: string
+          nullable: true
+        coreBankingTransactionId:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    BuyGoodsTransactionStatusCheckRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        occasion:
+          type: string
+          nullable: true
+        remarks:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CalculateFeeExtendedRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+          nullable: true
+        channel:
+          type: string
+          nullable: true
+        scheme:
+          type: string
+          nullable: true
+        participantCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CalculateFeeExtendedResponse:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        responseCode:
+          type: string
+          nullable: true
+        responseMessage:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        totalFeeAmount:
+          type: number
+          format: double
+        totalAmount:
+          type: number
+          format: double
+        feeSplits:
+          type: array
+          items:
+            $ref: '#/components/schemas/FeeSplitResponse'
+          nullable: true
+      additionalProperties: false
+    CalculateFeeExtendedResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/CalculateFeeExtendedResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    CalculateFeeRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CalculateFeeResponse:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        responseCode:
+          type: string
+          nullable: true
+        responseMessage:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        beneficiaryFee:
+          type: string
+          nullable: true
+        originatorFee:
+          type: string
+          nullable: true
+        totalFeeAmount:
+          type: number
+          format: double
+        totalAmount:
+          type: number
+          format: double
+      additionalProperties: false
+    CalculateFeeResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/CalculateFeeResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    CancelStandingOrderRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        standingOrderId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CancelStandingOrderResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        standingOrderId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CheckATIRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CheckATIResponse:
+      type: object
+      properties:
+        lastSwapDate:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CheckPaymentStatusRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        currency:
+          type: string
+          nullable: true
+      additionalProperties: false
+    ConfirmPaymentRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+          nullable: true
+        gateWayTransactionId:
+          type: string
+          nullable: true
+        customerName:
+          type: string
+          nullable: true
+        customerAccountNumber:
+          type: string
+          nullable: true
+        coreBankingTransactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CreateMerchantRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+        bankCode:
+          type: string
+          nullable: true
+        acquirerCode:
+          type: string
+          nullable: true
+        displayName:
+          type: string
+          nullable: true
+        fullName:
+          type: string
+          nullable: true
+        location:
+          type: string
+          nullable: true
+        businessType:
+          type: string
+          nullable: true
+        merchantCategoryCode:
+          type: string
+          nullable: true
+        isReferenceRequired:
+          type: boolean
+        isLookupRequired:
+          type: boolean
+        lookupUrl:
+          type: string
+          nullable: true
+        isTransactionValidationRequired:
+          type: boolean
+        transactionValidationUrl:
+          type: string
+          nullable: true
+        isIpnRequired:
+          type: boolean
+        ipnUrl:
+          type: string
+          nullable: true
+        isSmsNotificationRequired:
+          type: boolean
+        notificationPhoneNumber:
+          type: string
+          nullable: true
+        isEmailNotificationRequired:
+          type: boolean
+        notificationEmail:
+          type: string
+          nullable: true
+        contactPhoneNumber:
+          type: string
+          nullable: true
+        contactEmail:
+          type: string
+          nullable: true
+        economicModel:
+          type: string
+          nullable: true
+        alternativeChannels:
+          type: array
+          items:
+            $ref: '#/components/schemas/AlternativeChannel'
+          nullable: true
+      additionalProperties: false
+    CreateNotificationRequest:
+      required:
+      - message
+      - recipientId
+      - senderId
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        message:
+          type: string
+          nullable: true
+        senderId:
+          type: string
+          nullable: true
+        recipientId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CreateNotificationResponse:
+      type: object
+      properties:
+        sessionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CreateNotificationResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/CreateNotificationResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    CustomerCreditTransferRequests:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        messageId:
+          type: string
+          nullable: true
+        creationDateTime:
+          type: string
+          nullable: true
+        numberOfTransactions:
+          type: integer
+          format: int32
+          nullable: true
+        initiatingPartyOrgId:
+          type: string
+          nullable: true
+        forwardingAgentOrgId:
+          type: string
+          nullable: true
+        paymentInformationId:
+          type: string
+          nullable: true
+        paymentMethod:
+          type: string
+          nullable: true
+        transactionType:
+          type: string
+          nullable: true
+        instrumentCode:
+          type: string
+          nullable: true
+        initiatingChannel:
+          type: string
+          nullable: true
+        requestedExecutionDateTime:
+          type: string
+          nullable: true
+        debtorName:
+          type: string
+          nullable: true
+        debtorOrgId:
+          type: string
+          nullable: true
+        debtorPhone:
+          type: string
+          nullable: true
+        debtorAccountId:
+          type: string
+          nullable: true
+        debtorAccountName:
+          type: string
+          nullable: true
+        debtorAgentId:
+          type: string
+          nullable: true
+        ultimateDebtorName:
+          type: string
+          nullable: true
+        ultimateDebtorPhone:
+          type: string
+          nullable: true
+        paymentId:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+          nullable: true
+        amountCurrency:
+          type: string
+          nullable: true
+        chargeBearer:
+          type: string
+          nullable: true
+        creditorAgentId:
+          type: string
+          nullable: true
+        creditorName:
+          type: string
+          nullable: true
+        creditorOrgId:
+          type: string
+          nullable: true
+        creditorPhone:
+          type: string
+          nullable: true
+        creditorAccountId:
+          type: string
+          nullable: true
+        creditorAccountName:
+          type: string
+          nullable: true
+        ultimateCreditorName:
+          type: string
+          nullable: true
+        ultimateCreditorPhone:
+          type: string
+          nullable: true
+        purposeCode:
+          type: string
+          nullable: true
+        unstructuredRemittance:
+          type: string
+          nullable: true
+        structuredRemittanceReference:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CustomerCreditTransferResponse:
+      type: object
+      properties:
+        messageId:
+          type: string
+          nullable: true
+        creationDateTime:
+          type: string
+          nullable: true
+        instructingAgentId:
+          type: string
+          nullable: true
+        instructedAgentId:
+          type: string
+          nullable: true
+        originalMessageId:
+          type: string
+          nullable: true
+        originalMessageNameId:
+          type: string
+          nullable: true
+        originalCreationDateTime:
+          type: string
+          nullable: true
+        statusId:
+          type: string
+          nullable: true
+        originalEndToEndId:
+          type: string
+          nullable: true
+        transactionStatus:
+          type: string
+          nullable: true
+        statusReasonCode:
+          type: string
+          nullable: true
+        statusReasonProprietary:
+          type: string
+          nullable: true
+        acceptanceDateTime:
+          type: string
+          nullable: true
+        settlementAmount:
+          type: number
+          format: double
+          nullable: true
+        settlementAmountCurrency:
+          type: string
+          nullable: true
+        requestedExecutionDateTime:
+          type: string
+          nullable: true
+        settlementMethod:
+          type: string
+          nullable: true
+        clearingSystem:
+          type: string
+          nullable: true
+        transactionType:
+          type: string
+          nullable: true
+        instrumentCode:
+          type: string
+          nullable: true
+        initiatingChannel:
+          type: string
+          nullable: true
+        mandateId:
+          type: string
+          nullable: true
+        unstructuredRemittance:
+          type: string
+          nullable: true
+        structuredRemittanceReference:
+          type: string
+          nullable: true
+        ultimateDebtorName:
+          type: string
+          nullable: true
+        ultimateDebtorPhone:
+          type: string
+          nullable: true
+        debtorName:
+          type: string
+          nullable: true
+        debtorPhone:
+          type: string
+          nullable: true
+        debtorAccountId:
+          type: string
+          nullable: true
+        debtorAccountName:
+          type: string
+          nullable: true
+        debtorAgentId:
+          type: string
+          nullable: true
+        creditorAgentId:
+          type: string
+          nullable: true
+        creditorName:
+          type: string
+          nullable: true
+        creditorPhone:
+          type: string
+          nullable: true
+        creditorAccountId:
+          type: string
+          nullable: true
+        creditorAccountName:
+          type: string
+          nullable: true
+        ultimateCreditorName:
+          type: string
+          nullable: true
+        ultimateCreditorPhone:
+          type: string
+          nullable: true
+        purposeCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CustomerCreditTransferResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/CustomerCreditTransferResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    DeleteCustomerRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        account:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+        login:
+          type: string
+          nullable: true
+        password:
+          type: string
+          nullable: true
+        sortCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    DeleteMerchantRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    DisableMerchantRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    EditMerchantRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+        bankCode:
+          type: string
+          nullable: true
+        acquirerCode:
+          type: string
+          nullable: true
+        displayName:
+          type: string
+          nullable: true
+        fullName:
+          type: string
+          nullable: true
+        location:
+          type: string
+          nullable: true
+        businessType:
+          type: string
+          nullable: true
+        merchantCategoryCode:
+          type: string
+          nullable: true
+        isReferenceRequired:
+          type: boolean
+        isLookupRequired:
+          type: boolean
+        lookupUrl:
+          type: string
+          nullable: true
+        isTransactionValidationRequired:
+          type: boolean
+        transactionValidationUrl:
+          type: string
+          nullable: true
+        isIpnRequired:
+          type: boolean
+        ipnUrl:
+          type: string
+          nullable: true
+        isSmsNotificationRequired:
+          type: boolean
+        notificationPhoneNumber:
+          type: string
+          nullable: true
+        isEmailNotificationRequired:
+          type: boolean
+        notificationEmail:
+          type: string
+          nullable: true
+        contactPhoneNumber:
+          type: string
+          nullable: true
+        contactEmail:
+          type: string
+          nullable: true
+        economicModel:
+          type: string
+          nullable: true
+        alternativeChannels:
+          type: array
+          items:
+            $ref: '#/components/schemas/AlternativeChannel'
+          nullable: true
+        targetTillNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    EnableMerchantRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    Error:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          nullable: true
+        message:
+          type: string
+          nullable: true
+        isTransient:
+          type: boolean
+        inner:
+          $ref: '#/components/schemas/Error'
+        fullMessage:
+          type: string
+          nullable: true
+          readOnly: true
+      additionalProperties: false
+    ErrorResponse:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+          default: 400
+        message:
+          type: string
+          default: One or more errors occurred!
+          nullable: true
+        errors:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          nullable: true
+      additionalProperties: false
+    FeeSplitResponse:
+      type: object
+      properties:
+        fee:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+        bankCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    FlatCreditTransferTransaction:
+      type: object
+      properties:
+        interbankSettlementAmount:
+          type: number
+          format: double
+        interbankSettlementAmountCurrency:
+          type: string
+          nullable: true
+        acceptanceDateTime:
+          type: string
+          nullable: true
+        chargeBearer:
+          type: string
+          nullable: true
+        mandateRelatedInfoMandateId:
+          type: string
+          nullable: true
+        mandateRelatedInfoDateOfSignature:
+          type: string
+          nullable: true
+        ultimateDebtorName:
+          type: string
+          nullable: true
+        initiatingPartyName:
+          type: string
+          nullable: true
+        debtorName:
+          type: string
+          nullable: true
+        debtorAccountOtherId:
+          type: string
+          nullable: true
+        debtorAgentFinancialInstitutionIdBIC:
+          type: string
+          nullable: true
+        debtorAgentFinancialInstitutionIdClearingSystemMemberIdMemberId:
+          type: string
+          nullable: true
+        debtorAgentFinancialInstitutionIdOtherId:
+          type: string
+          nullable: true
+        creditorAgentFinancialInstitutionIdBIC:
+          type: string
+          nullable: true
+        creditorAgentFinancialInstitutionIdClearingSystemMemberIdMemberId:
+          type: string
+          nullable: true
+        creditorAgentFinancialInstitutionIdOtherId:
+          type: string
+          nullable: true
+        creditorName:
+          type: string
+          nullable: true
+        creditorAccountOtherId:
+          type: string
+          nullable: true
+        ultimateCreditorName:
+          type: string
+          nullable: true
+        purposeCode:
+          type: string
+          nullable: true
+        purposeProprietary:
+          type: string
+          nullable: true
+        taxCreditorTaxId:
+          type: string
+          nullable: true
+        taxDebtorTaxId:
+          type: string
+          nullable: true
+        narration:
+          type: string
+          nullable: true
+      additionalProperties: false
+    FlatCustomerBank:
+      type: object
+      properties:
+        bankName:
+          type: string
+          nullable: true
+        isDefault:
+          type: boolean
+        lookupBankName:
+          type: string
+          nullable: true
+        sortCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    ForexData:
+      type: object
+      properties:
+        currency:
+          type: string
+          nullable: true
+        exchangeRateBuy:
+          type: number
+          format: double
+        exchangeRateSell:
+          type: number
+          format: double
+      additionalProperties: false
+    ForexRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        sourceCurrency:
+          type: string
+          nullable: true
+        destinationCurrency:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+      additionalProperties: false
+    ForexResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        exchangeRates:
+          type: array
+          items:
+            $ref: '#/components/schemas/ForexData'
+          nullable: true
+      additionalProperties: false
+    GenerateQRCodeResponse:
+      type: object
+      properties:
+        qrCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    GenerateWebhookUrlRequest:
+      type: object
+      properties:
+        identifier:
+          type: string
+          nullable: true
+        eventName:
+          type: string
+          nullable: true
+      additionalProperties: false
+    GenerateWebhookUrlResponse:
+      type: object
+      properties:
+        url:
+          type: string
+          nullable: true
+      additionalProperties: false
+    GetCustomerBankListRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    GetCustomerBankListResponse:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        destinationName:
+          type: string
+          nullable: true
+        bankList:
+          type: array
+          items:
+            $ref: '#/components/schemas/FlatCustomerBank'
+          nullable: true
+      additionalProperties: false
+    GetCustomerBankListResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/GetCustomerBankListResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    GetTransactionRequestStatusRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        endToEndId:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+        instructingAgentId:
+          type: string
+          nullable: true
+        instructedAgentId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    GetTransactionRequestStatusResponse:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        messageId:
+          type: string
+          nullable: true
+        creationDateTime:
+          type: string
+          nullable: true
+        instructingAgentId:
+          type: string
+          nullable: true
+        instructedAgentId:
+          type: string
+          nullable: true
+        originalMessageId:
+          type: string
+          nullable: true
+        originalMessageNameId:
+          type: string
+          nullable: true
+        originalCreationDateTime:
+          type: string
+          nullable: true
+        statusId:
+          type: string
+          nullable: true
+        originalEndToEndId:
+          type: string
+          nullable: true
+        transactionStatus:
+          type: string
+          nullable: true
+        statusReasonCode:
+          type: string
+          nullable: true
+        statusReasonProprietary:
+          type: string
+          nullable: true
+        acceptanceDateTime:
+          type: string
+          nullable: true
+        settlementAmount:
+          type: number
+          format: double
+          nullable: true
+        settlementAmountCurrency:
+          type: string
+          nullable: true
+        requestedExecutionDateTime:
+          type: string
+          nullable: true
+        settlementMethod:
+          type: string
+          nullable: true
+        clearingSystem:
+          type: string
+          nullable: true
+        transactionType:
+          type: string
+          nullable: true
+        instrumentCode:
+          type: string
+          nullable: true
+        initiatingChannel:
+          type: string
+          nullable: true
+        mandateId:
+          type: string
+          nullable: true
+        unstructuredRemittance:
+          type: string
+          nullable: true
+        structuredRemittanceReference:
+          type: string
+          nullable: true
+        ultimateDebtorName:
+          type: string
+          nullable: true
+        ultimateDebtorPhone:
+          type: string
+          nullable: true
+        debtorName:
+          type: string
+          nullable: true
+        debtorPhone:
+          type: string
+          nullable: true
+        debtorAccountId:
+          type: string
+          nullable: true
+        debtorAccountName:
+          type: string
+          nullable: true
+        debtorAgentId:
+          type: string
+          nullable: true
+        creditorAgentId:
+          type: string
+          nullable: true
+        creditorName:
+          type: string
+          nullable: true
+        creditorPhone:
+          type: string
+          nullable: true
+        creditorAccountId:
+          type: string
+          nullable: true
+        creditorAccountName:
+          type: string
+          nullable: true
+        ultimateCreditorName:
+          type: string
+          nullable: true
+        ultimateCreditorPhone:
+          type: string
+          nullable: true
+        purposeCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    GetTransactionRequestStatusResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/GetTransactionRequestStatusResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    GetTransactionStatusRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        endToEndId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    GetTransactionStatusResponse:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        responseCode:
+          type: string
+          nullable: true
+        responseMessage:
+          type: string
+          nullable: true
+        status:
+          type: string
+          nullable: true
+      additionalProperties: false
+    GetTransactionStatusResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/GetTransactionStatusResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    IMTdResponse:
+      type: object
+      properties:
+        conversationID:
+          type: string
+          nullable: true
+        originatorConversationID:
+          type: string
+          nullable: true
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+      additionalProperties: false
+    InitiateB2BExpressCheckoutRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        amount:
+          type: integer
+          format: int64
+        remarks:
+          type: string
+          nullable: true
+        partnerName:
+          type: string
+          nullable: true
+        payerTillNumber:
+          type: string
+          nullable: true
+        receiverBillCode:
+          type: string
+          nullable: true
+        coreBankingTransactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    InitiateB2BExpressCheckoutResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          nullable: true
+        code:
+          type: string
+          nullable: true
+      additionalProperties: false
+    InitiateB2CPaymentRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        occasion:
+          type: string
+          nullable: true
+        remarks:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+        customerName:
+          type: string
+          nullable: true
+        coreBankingTransactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    InitiatePaymentValidationRequest:
+      type: object
+      properties:
+        phoneNumber:
+          type: string
+          nullable: true
+        remarks:
+          type: string
+          nullable: true
+        occasion:
+          type: string
+          nullable: true
+        reference:
+          type: string
+          nullable: true
+      additionalProperties: false
+    InitiateTransactionReversalRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        occasion:
+          type: string
+          nullable: true
+        remarks:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    InitiateTransferRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        transactionReference:
+          type: string
+          nullable: true
+        remarks:
+          type: string
+          nullable: true
+        amount:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+        occasion:
+          type: string
+          nullable: true
+        foreignCurrency:
+          type: string
+          nullable: true
+        senderName:
+          type: string
+          nullable: true
+        currency:
+          type: string
+          nullable: true
+        sourceUri:
+          type: string
+          nullable: true
+        senderSp:
+          type: string
+          nullable: true
+        senderDob:
+          type: string
+          nullable: true
+        senderNationality:
+          type: string
+          nullable: true
+        idType:
+          type: string
+          nullable: true
+        idNumber:
+          type: string
+          nullable: true
+        senderCountryIso:
+          type: string
+          nullable: true
+        purposeOfRemittance:
+          type: string
+          nullable: true
+        receiverName:
+          type: string
+          nullable: true
+        senderIdIssueDate:
+          type: string
+          nullable: true
+        senderIdExpireDate:
+          type: string
+          nullable: true
+        senderIdIssuePlace:
+          type: string
+          nullable: true
+      additionalProperties: false
+    InternalTransferRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        sourceAccount:
+          type: string
+          nullable: true
+        destinationAccount:
+          type: string
+          nullable: true
+        narration:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+      additionalProperties: false
+    InternalTransferResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    K2BTransactionRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        sourceAccount:
+          type: string
+          nullable: true
+        destinationAccount:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+      additionalProperties: false
+    K2BTransactionResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    KYCAccount:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        customer:
+          type: string
+          nullable: true
+        accountTitle:
+          type: string
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        currency:
+          type: string
+          nullable: true
+        accountOfficer:
+          type: string
+          nullable: true
+        categoryCode:
+          type: string
+          nullable: true
+        openingDate:
+          type: string
+          format: date-time
+          nullable: true
+      additionalProperties: false
+    KYCRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        searchType:
+          type: string
+          nullable: true
+        searchValue:
+          type: string
+          nullable: true
+      additionalProperties: false
+    KYCResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        customerStatus:
+          type: string
+          nullable: true
+        accounts:
+          type: array
+          items:
+            $ref: '#/components/schemas/KYCAccount'
+          nullable: true
+      additionalProperties: false
+    LookupMerchantRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    LookupMerchantResponse:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        responseCode:
+          type: string
+          nullable: true
+        responseMessage:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+        bankCode:
+          type: string
+          nullable: true
+        acquirerCode:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+        displayName:
+          type: string
+          nullable: true
+        fullName:
+          type: string
+          nullable: true
+        location:
+          type: string
+          nullable: true
+        businessType:
+          type: string
+          nullable: true
+        merchantCategoryCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    LookupMerchantResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/LookupMerchantResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    MobileMoneyTransactionStatusCheckRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        occasion:
+          type: string
+          nullable: true
+        remarks:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    MpesaB2BRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        sourceAccount:
+          type: string
+          nullable: true
+        destinationAccount:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+      additionalProperties: false
+    MpesaB2BResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    MpesaB2CRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+      additionalProperties: false
+    MpesaB2CResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    MpesaResponse:
+      type: object
+      properties:
+        conversationId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    NetworkingRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        networkType:
+          type: string
+          nullable: true
+      additionalProperties: false
+    NetworkingResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        networkStatus:
+          type: string
+          nullable: true
+      additionalProperties: false
+    OnboardingResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          nullable: true
+        message:
+          type: string
+          nullable: true
+        reference:
+          type: string
+          nullable: true
+      additionalProperties: false
+    OnboardingResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/OnboardingResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    PayBillQRCodeRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        size:
+          type: integer
+          format: int32
+        amount:
+          type: integer
+          format: int64
+        merchantName:
+          type: string
+          nullable: true
+        billerCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PayBillRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        remarks:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+        accountReference:
+          type: string
+          nullable: true
+        coreBankingTransactionId:
+          type: string
+          nullable: true
+        billerCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PayBillTransactionStatusCheckRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        occasion:
+          type: string
+          nullable: true
+        remarks:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+        billerCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PayBillerRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        billerCode:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+      additionalProperties: false
+    PayBillerResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PaymentActivationRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        creationDateTime:
+          type: string
+          nullable: true
+        paymentActivationReason:
+          type: string
+          nullable: true
+        originalInstructionId:
+          type: string
+          nullable: true
+        originalEndToEndId:
+          type: string
+          nullable: true
+        originalTransactionId:
+          type: string
+          nullable: true
+        debtorName:
+          type: string
+          nullable: true
+        debtorAccountNumber:
+          type: string
+          nullable: true
+        debtorBankCode:
+          type: string
+          nullable: true
+        creditorName:
+          type: string
+          nullable: true
+        creditorAccountNumber:
+          type: string
+          nullable: true
+        creditorBankCode:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+          nullable: true
+        reasonCode:
+          type: string
+          nullable: true
+        additionalInfo:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PaymentActivationResponse:
+      type: object
+      properties:
+        messageId:
+          type: string
+          nullable: true
+        creationDateTime:
+          type: string
+          nullable: true
+        status:
+          type: string
+          nullable: true
+        reasonCode:
+          type: string
+          nullable: true
+        additionalInfo:
+          type: string
+          nullable: true
+        originalInstructionId:
+          type: string
+          nullable: true
+        originalEndToEndId:
+          type: string
+          nullable: true
+        originalTransactionId:
+          type: string
+          nullable: true
+        debtorName:
+          type: string
+          nullable: true
+        debtorAccountNumber:
+          type: string
+          nullable: true
+        debtorBankCode:
+          type: string
+          nullable: true
+        creditorName:
+          type: string
+          nullable: true
+        creditorAccountNumber:
+          type: string
+          nullable: true
+        creditorBankCode:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PaymentActivationResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/PaymentActivationResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    PaymentCancellationRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        creationDateTime:
+          type: string
+          nullable: true
+        cancellationReason:
+          type: string
+          nullable: true
+        originalInstructionId:
+          type: string
+          nullable: true
+        originalEndToEndId:
+          type: string
+          nullable: true
+        originalTransactionId:
+          type: string
+          nullable: true
+        debtorName:
+          type: string
+          nullable: true
+        debtorAccountNumber:
+          type: string
+          nullable: true
+        debtorBankCode:
+          type: string
+          nullable: true
+        creditorName:
+          type: string
+          nullable: true
+        creditorAccountNumber:
+          type: string
+          nullable: true
+        creditorBankCode:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+          nullable: true
+        reasonCode:
+          type: string
+          nullable: true
+        additionalInfo:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PaymentCancellationResponse:
+      type: object
+      properties:
+        messageId:
+          type: string
+          nullable: true
+        creationDateTime:
+          type: string
+          nullable: true
+        status:
+          type: string
+          nullable: true
+        reasonCode:
+          type: string
+          nullable: true
+        additionalInfo:
+          type: string
+          nullable: true
+        originalInstructionId:
+          type: string
+          nullable: true
+        originalEndToEndId:
+          type: string
+          nullable: true
+        originalTransactionId:
+          type: string
+          nullable: true
+        debtorName:
+          type: string
+          nullable: true
+        debtorAccountNumber:
+          type: string
+          nullable: true
+        debtorBankCode:
+          type: string
+          nullable: true
+        creditorName:
+          type: string
+          nullable: true
+        creditorAccountNumber:
+          type: string
+          nullable: true
+        creditorBankCode:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PaymentCancellationResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/PaymentCancellationResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    PaymentReversalRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        instructingAgentId:
+          type: string
+          nullable: true
+        instructedAgentId:
+          type: string
+          nullable: true
+        transactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/FlatCreditTransferTransaction'
+          nullable: true
+      additionalProperties: false
+    PaymentReversalResponse:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        messageId:
+          type: string
+          nullable: true
+        creationDateTime:
+          type: string
+          nullable: true
+        instructingAgentId:
+          type: string
+          nullable: true
+        instructedAgentId:
+          type: string
+          nullable: true
+        originalMessageId:
+          type: string
+          nullable: true
+        originalMessageNameId:
+          type: string
+          nullable: true
+        originalCreationDateTime:
+          type: string
+          nullable: true
+        statusId:
+          type: string
+          nullable: true
+        originalEndToEndId:
+          type: string
+          nullable: true
+        transactionStatus:
+          type: string
+          nullable: true
+        statusReasonCode:
+          type: string
+          nullable: true
+        statusReasonProprietary:
+          type: string
+          nullable: true
+        acceptanceDateTime:
+          type: string
+          nullable: true
+        settlementAmount:
+          type: number
+          format: double
+          nullable: true
+        settlementAmountCurrency:
+          type: string
+          nullable: true
+        requestedExecutionDateTime:
+          type: string
+          nullable: true
+        settlementMethod:
+          type: string
+          nullable: true
+        clearingSystem:
+          type: string
+          nullable: true
+        transactionType:
+          type: string
+          nullable: true
+        instrumentCode:
+          type: string
+          nullable: true
+        initiatingChannel:
+          type: string
+          nullable: true
+        mandateId:
+          type: string
+          nullable: true
+        unstructuredRemittance:
+          type: string
+          nullable: true
+        structuredRemittanceReference:
+          type: string
+          nullable: true
+        ultimateDebtorName:
+          type: string
+          nullable: true
+        ultimateDebtorPhone:
+          type: string
+          nullable: true
+        debtorName:
+          type: string
+          nullable: true
+        debtorPhone:
+          type: string
+          nullable: true
+        debtorAccountId:
+          type: string
+          nullable: true
+        debtorAccountName:
+          type: string
+          nullable: true
+        debtorAgentId:
+          type: string
+          nullable: true
+        creditorAgentId:
+          type: string
+          nullable: true
+        creditorName:
+          type: string
+          nullable: true
+        creditorPhone:
+          type: string
+          nullable: true
+        creditorAccountId:
+          type: string
+          nullable: true
+        creditorAccountName:
+          type: string
+          nullable: true
+        ultimateCreditorName:
+          type: string
+          nullable: true
+        ultimateCreditorPhone:
+          type: string
+          nullable: true
+        purposeCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PaymentReversalResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/PaymentReversalResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    PaymentStatusResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        refNo:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        currency:
+          type: string
+          nullable: true
+        clientInvoiceReference:
+          type: string
+          nullable: true
+        paymentDate:
+          type: string
+          nullable: true
+        amountPaid:
+          type: string
+          nullable: true
+        amountExpected:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PaymentStatusResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/PaymentStatusResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    PerformAsyncTransactionRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+          nullable: true
+        bankCode:
+          type: string
+          nullable: true
+        acquirerCode:
+          type: string
+          nullable: true
+        coreBankingTransactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PerformAsyncTransactionResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+        reference:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        requestTime:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+        paymentReason:
+          type: string
+          nullable: true
+        endToEndId:
+          type: string
+          nullable: true
+        payerAccountId:
+          type: string
+          nullable: true
+        responseMessage:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PerformAsyncTransactionResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/PerformAsyncTransactionResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    PesalinkToBankIncomingRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        sourceAccount:
+          type: string
+          nullable: true
+        destinationAccount:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+      additionalProperties: false
+    PesalinkToBankIncomingResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PesalinkToBankInitiatorRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        sourceAccount:
+          type: string
+          nullable: true
+        destinationAccount:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+      additionalProperties: false
+    PesalinkToBankInitiatorResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PesalinkToBankRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        sourceAccount:
+          type: string
+          nullable: true
+        destinationAccount:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        endToEndId:
+          type: string
+          nullable: true
+        paymentNarrative:
+          type: string
+          nullable: true
+        beneficiaryName:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PesalinkToBankResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    ProcessC2BPaymentRequest:
+      type: object
+      properties:
+        lastName:
+          type: string
+          nullable: true
+        firstName:
+          type: string
+          nullable: true
+        middleName:
+          type: string
+          nullable: true
+        billRefNumber:
+          type: string
+          nullable: true
+        msisdn:
+          type: string
+          nullable: true
+        orgAccountBalance:
+          type: number
+          format: double
+          nullable: true
+        invoiceNumber:
+          type: string
+          nullable: true
+        TransID:
+          type: string
+          nullable: true
+        TransTime:
+          type: string
+          nullable: true
+        TransAmount:
+          type: integer
+          format: int64
+        transactionType:
+          type: string
+          nullable: true
+        businessShortCode:
+          type: string
+          nullable: true
+        thirdPartyTransID:
+          type: string
+          nullable: true
+      additionalProperties: false
+    ProcessC2BPaymentResponse:
+      type: object
+      properties:
+        resultCode:
+          type: string
+          nullable: true
+        resultDesc:
+          type: string
+          nullable: true
+      additionalProperties: false
+    ProcessWebhookRequest:
+      required:
+      - content
+      type: object
+      properties:
+        content:
+          type: string
+          nullable: true
+      additionalProperties: false
+    RegisterCustomerRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        account:
+          type: string
+          nullable: true
+        defaultRecord:
+          type: integer
+          format: int32
+        document:
+          type: string
+          nullable: true
+        documentNumber:
+          type: string
+          nullable: true
+        email:
+          type: string
+          nullable: true
+        language:
+          type: string
+          nullable: true
+        login:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        expiry:
+          type: string
+          nullable: true
+        pan:
+          type: string
+          nullable: true
+        password:
+          type: string
+          nullable: true
+        sortCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    Result:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    RtgsTransactionRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        sourceAccount:
+          type: string
+          nullable: true
+        destinationAccount:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        beneficiaryName:
+          type: string
+          nullable: true
+        narration:
+          type: string
+          nullable: true
+        swiftCode:
+          nullable: true
+      additionalProperties: false
+    RtgsTransactionResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    SendBusinessQRCodeRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        size:
+          type: integer
+          format: int32
+        amount:
+          type: integer
+          format: int64
+        merchantName:
+          type: string
+          nullable: true
+        businessNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    SendMobileMoneyQRCodeRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        size:
+          type: integer
+          format: int32
+        amount:
+          type: integer
+          format: int64
+        merchantName:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    StandingOrderExternalRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+      additionalProperties: false
+    StandingOrderExternalResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        standingOrderId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    SystemNotificationRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        eventCode:
+          type: string
+          nullable: true
+        eventParameter:
+          type: string
+          nullable: true
+        eventDescription:
+          type: string
+          nullable: true
+        eventTime:
+          type: string
+          nullable: true
+      additionalProperties: false
+    SystemNotificationResponse:
+      type: object
+      additionalProperties: false
+    SystemNotificationResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/SystemNotificationResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    TransactionEnquiryRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        accountNumber:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    TransactionEnquiryResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionStatus:
+          type: string
+          nullable: true
+      additionalProperties: false
+    TransactionPostingRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/TransactionPostingRequestItem'
+          nullable: true
+      additionalProperties: false
+    TransactionPostingRequestItem:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        transactionType:
+          type: string
+          nullable: true
+        sourceAccount:
+          type: string
+          nullable: true
+        sourceCurrency:
+          type: string
+          nullable: true
+        destinationAccount:
+          type: string
+          nullable: true
+        destinationCurrency:
+          type: string
+          nullable: true
+        customerNarration:
+          type: string
+          nullable: true
+        postingNarration:
+          type: string
+          nullable: true
+        bic:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+      additionalProperties: false
+    TransactionPostingResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    TransactionReversalRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        reference:
+          type: string
+          nullable: true
+        transactionId:
+          type: string
+          nullable: true
+        reason:
+          type: string
+          nullable: true
+      additionalProperties: false
+    TransactionReversalResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+          nullable: true
+        responseDescription:
+          type: string
+          nullable: true
+        transactionStatus:
+          type: string
+          nullable: true
+      additionalProperties: false
+    UpdateCustomerRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        account:
+          type: string
+          nullable: true
+        defaultRecord:
+          type: integer
+          format: int32
+        document:
+          type: string
+          nullable: true
+        documentNumber:
+          type: string
+          nullable: true
+        email:
+          type: string
+          nullable: true
+        language:
+          type: string
+          nullable: true
+        login:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        expiry:
+          type: string
+          nullable: true
+        pan:
+          type: string
+          nullable: true
+        password:
+          type: string
+          nullable: true
+        sortCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    ValidatePaymentRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+          nullable: true
+      additionalProperties: false
+    ValidateTransactionRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        tillNumber:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+          nullable: true
+      additionalProperties: false
+    ValidateTransactionResponse:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        responseCode:
+          type: string
+          nullable: true
+        responseMessage:
+          type: string
+          nullable: true
+      additionalProperties: false
+    ValidateTransactionResponseResult:
+      type: object
+      properties:
+        hasError:
+          type: boolean
+          readOnly: true
+        value:
+          $ref: '#/components/schemas/ValidateTransactionResponse'
+        error:
+          $ref: '#/components/schemas/Error'
+      additionalProperties: false
+    WithdrawCashQRCodeRequest:
+      type: object
+      properties:
+        reference:
+          type: string
+          nullable: true
+        size:
+          type: integer
+          format: int32
+        amount:
+          type: integer
+          format: int64
+        merchantName:
+          type: string
+          nullable: true
+        agentTillNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: 'JWT Authorization header using the Bearer scheme. Example: "Authorization:
+        Bearer {token}"'
+      name: Authorization
+      in: header
+tags:
+- name: Overview
+  description: General overview of the CBL API, authentication, and usage principles.
+- name: Responsible Use
+  description: "\n\nThank you for using our API!  \nWe’re making\
+    \ this project open source so it can help developers build useful and innovative\
+    \ solutions.  \nTo ensure fair and ethical use, please follow these simple guidelines:\n\
+    \n## ✅ Do\n- Use the API to build applications that add value to individuals and\
+    \ communities.  \n- Attribute and credit this project when required.  \n- Respect\
+    \ rate limits and follow best practices for efficiency.  \n- Share improvements\
+    \ or issues responsibly through contributions or feedback.  \n\n## ❌ Don’t\n-\
+    \ Use the API for harmful, illegal, or discriminatory purposes.  \n- Abuse, overload,\
+    \ or attempt to bypass API restrictions.  \n- Misrepresent the API’s outputs as\
+    \ official or authoritative beyond its scope.  \n- Exploit the API in ways that\
+    \ compromise security or privacy.  \n\n---\n\nBy using this API, you agree to\
+    \ use it responsibly and in good faith.  \nLet’s build something great together.\
+    \ \U0001F680"
