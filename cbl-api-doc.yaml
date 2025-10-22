@@ -21,7 +21,7 @@ info:
   contact:
     name: API Support
     url: https://github.com/hyveglobal/CBLGatewayDocs
-    email: support@example.com
+    email: customerservice@creditbank.co.ke
   license:
     name: MIT
     url: https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide
@@ -30,7 +30,7 @@ paths:
     post:
       tags:
       - Accounts
-      operationId: Cbl Core Banking Usecases Accounts Standing Order External Standing Order External Endpoint
+      operationId: Cbl Core Banking Usecases Accounts. Standing Order External Endpoint
       requestBody:
         content:
           application/json:
@@ -54,7 +54,7 @@ paths:
     post:
       tags:
       - Accounts
-      operationId: Cbl Core Banking Usecases Accounts KYC Endpoint
+      operationId: Cbl Core Banking Usecases Accounts. KYC Endpoint
       requestBody:
         content:
           application/json:
@@ -78,7 +78,7 @@ paths:
     post:
       tags:
       - Accounts
-      operationId: Cbl Core Banking Usecases Accounts Forex Endpoint
+      operationId: Cbl Core Banking Usecases Accounts. Forex Endpoint
       requestBody:
         content:
           application/json:
@@ -102,7 +102,7 @@ paths:
     post:
       tags:
       - Accounts
-      operationId: Cbl Core Banking Usecases Accounts Balance Inquiry Endpoint
+      operationId: Cbl Core Banking Usecases Accounts. Balance Inquiry Endpoint
       requestBody:
         content:
           application/json:
@@ -126,7 +126,7 @@ paths:
     post:
       tags:
       - Accounts
-      operationId: Cbl Core Banking Usecases Accounts Ameyo Endpoint
+      operationId: Cbl Core Banking Usecases Accounts. Ameyo Endpoint
       requestBody:
         content:
           application/json:
@@ -150,7 +150,7 @@ paths:
     post:
       tags:
       - Accounts
-      operationId: Cbl Core Banking Usecases Accounts Alias Creation Endpoint
+      operationId: Cbl Core Banking Usecases Accounts. Alias Creation Endpoint
       requestBody:
         content:
           application/json:
@@ -174,7 +174,7 @@ paths:
     post:
       tags:
       - Accounts
-      operationId: Cbl Core Banking Usecases Account Statement Endpoint
+      operationId: Cbl Core Banking Usecases Accounts. Account Statement Endpoint
       requestBody:
         content:
           application/json:
@@ -246,7 +246,7 @@ paths:
     post:
       tags:
       - Cancel Standing Order
-      operationId: Cbl Core Banking Usecases Accounts Cancel Standing Order Endpoint
+      operationId: Cbl Core Banking Usecases Accounts. Cancel Standing Order Endpoint
       requestBody:
         content:
           application/json:
@@ -296,7 +296,7 @@ paths:
     post:
       tags:
       - Cbl.Web.Api
-      operationId: Cbl Notifications Usecases Create Notification Endpoint
+      operationId: Cbl Notifications Usecases. Create Notification Endpoint
       requestBody:
         content:
           application/json:
@@ -424,7 +424,7 @@ paths:
     post:
       tags:
       - IMT
-      operationId: Cbl Integrations Usecases Payments IMT Transfer Initiate Transfer Endpoint
+      operationId: Cbl Integrations Usecases Payments IMT Transfer. Initiate Transfer Endpoint
       requestBody:
         content:
           application/json:
@@ -465,7 +465,7 @@ paths:
   /api/v1/integration/ipslmerchant/transaction/validate:
     post:
       tags:
-      - IPSLMerchant
+      - IPSL Merchant
       operationId: Cbl Integrations Usecases Payments IPSL Merchant Transaction. Validate Transaction Endpoint
       requestBody:
         content:
@@ -489,7 +489,7 @@ paths:
   /api/v1/integration/ipslmerchant/transaction/perform-async:
     post:
       tags:
-      - IPSLMerchant
+      - IPSL Merchant
       operationId: Cbl Integrations Usecases Payments IPSL Merchant Transaction. Perform Async Transaction Endpoint
       requestBody:
         content:
@@ -513,7 +513,7 @@ paths:
   /api/v1/integration/ipslmerchant/transaction/status:
     post:
       tags:
-      - IPSLMerchant
+      - IPSL Merchant
       operationId: Cbl Integrations Usecases Payments IPSL Merchant Transaction. Get Transaction Status Endpoint
       requestBody:
         content:
@@ -537,7 +537,7 @@ paths:
   /api/v1/integration/ipslmerchant/transaction/calculate-fee:
     post:
       tags:
-      - IPSLMerchant
+      - IPSL Merchant
       operationId: Cbl Integrations Usecases Payments IPSL Merchant Transaction Calculate Fee Endpoint
       requestBody:
         content:
@@ -561,8 +561,8 @@ paths:
   /api/v1/integration/ipslmerchant/transaction/calculate-fee-extended:
     post:
       tags:
-      - IPSLMerchant
-      operationId: Cbl Integrations Usecases Payments IPSL Merchant Transaction Calculate Fee Extended Endpoint
+      - IPSL Merchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Transaction. Calculate Fee Extended Endpoint
       requestBody:
         content:
           application/json:
@@ -585,8 +585,8 @@ paths:
   /api/v1/integration/ipslmerchant/manage/merchant/lookup/{reference}/{tillnumber}:
     get:
       tags:
-      - IPSLMerchant
-      operationId: Cbl Integrations Usecases Payments IPSL Merchant Manage Lookup Merchant Endpoint
+      - IPSL Merchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Manage Lookup Merchant. Lookup Merchant Endpoint
       requestBody:
         content:
           '*/*':
@@ -612,8 +612,8 @@ paths:
   /api/v1/integration/ipslmerchant/manage/merchant/enable:
     post:
       tags:
-      - IPSLMerchant
-      operationId: Cbl Integrations Usecases Payments IPSL Merchant Manage Enable Merchant Endpoint
+      - IPSL Merchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Manage Enable Merchant. Enable Merhant Endpoint
       requestBody:
         content:
           application/json:
@@ -636,8 +636,8 @@ paths:
   /api/v1/integration/ipslmerchant/manage/merchant/edit:
     post:
       tags:
-      - IPSLMerchant
-      operationId: CblIntegrationsUsecasesPaymentsIPSLMerchantManageEditMerchantEditMerchantEndpoint
+      - IPSL Merchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Manage Edit Merchant. Edit Merchant Endpoint
       requestBody:
         content:
           application/json:
@@ -660,8 +660,8 @@ paths:
   /api/v1/integration/ipslmerchant/manage/merchant/disable:
     post:
       tags:
-      - IPSLMerchant
-      operationId: CblIntegrationsUsecasesPaymentsIPSLMerchantManageDisableMerchantDisableMerchantEndpoint
+      - IPSL Merchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Manage Disable Merchant. Disable Merchant Endpoint
       requestBody:
         content:
           application/json:
@@ -684,8 +684,8 @@ paths:
   /api/v1/integration/ipslmerchant/manage/merchant/delete:
     post:
       tags:
-      - IPSLMerchant
-      operationId: CblIntegrationsUsecasesPaymentsIPSLMerchantManageDeleteMerchantDeleteMerchantEndpoint
+      - IPSL Merchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Manage Delete Merchant. Delete Merchant Endpoint
       requestBody:
         content:
           application/json:
@@ -708,8 +708,8 @@ paths:
   /api/v1/integration/ipslmerchant/manage/merchant/create:
     post:
       tags:
-      - IPSLMerchant
-      operationId: CblIntegrationsUsecasesPaymentsIPSLMerchantManageCreateMerchantCreateMerchantEndpoint
+      - IPSL Merchant
+      operationId: Cbl Integrations Usecases Payments IPSL Merchant Manage Create Merchant. Create Merchant Endpoint
       requestBody:
         content:
           application/json:
@@ -733,7 +733,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMpesaInitiateTransactionReversalInitiateTransactionReversalEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money Mpesa Initiate Transaction Reversal. Initiate Transaction Reversal Endpoint
       requestBody:
         content:
           application/json:
@@ -757,7 +757,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMpesaGenerateQRCodeWithdrawCashWithdrawCashQRCodeEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money Mpesa Generate QRCode. Withdraw Cash QRCode Endpoint
       requestBody:
         content:
           application/json:
@@ -781,7 +781,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMpesaGenerateQRCodeSendMobileMoneySendMobileMoneyQRCodeEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money Mpesa Generate QRCode. Send Mobile Money QRCode Endpoint
       requestBody:
         content:
           application/json:
@@ -805,7 +805,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMpesaGenerateQRCodeSendBusinessSendBusinessQRCodeEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money Mpesa Generate QRCode. Send Business QRCode Endpoint
       requestBody:
         content:
           application/json:
@@ -829,7 +829,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMpesaGenerateQRCodePayBillPayBillQRCodeEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money Mpesa Generate QRCode. Pay Bill QRCode Endpoint
       requestBody:
         content:
           application/json:
@@ -853,7 +853,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMpesaGenerateQRCodeBuyGoodsBuyGoodsQRCodeEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money Mpesa Generate QRCode. Buy Goods QRCode Endpoint
       requestBody:
         content:
           application/json:
@@ -877,7 +877,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMPESAInitiateTransactionStatusCheckPayBillPayBillTransactionStatusCheckEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money MPESA Initiate Transaction Status Check Pay Bill. Pay Bill Transaction Status Check Endpoint
       requestBody:
         content:
           application/json:
@@ -901,7 +901,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMPESAInitiateTransactionStatusCheckMobileMoneyMobileMoneyTransactionStatusCheckEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money MPESA Initiate Transaction Status Check Mobile Money Transaction Status Check Endpoint
       requestBody:
         content:
           application/json:
@@ -925,7 +925,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMPESAInitiateTransactionStatusCheckBuyGoodsBuyGoodsTransactionStatusCheckEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money MPESA Initiate Transaction Status Check Buy Goods Transaction Status Check Endpoint
       requestBody:
         content:
           application/json:
@@ -949,7 +949,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMPESAInitiateB2CPaymentInitiateB2CPaymentEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money MPESA Initiate B2C Payment Endpoint
       requestBody:
         content:
           application/json:
@@ -973,7 +973,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMPESAInitiateB2BExpressCheckoutInitiateB2BExpressCheckoutEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money MPESA Initiate B2B Express Checkout Endpoint
       requestBody:
         content:
           application/json:
@@ -997,7 +997,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMPESAB2BPaymentsPayBillPayBillEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money MPESA B2B Payments Pay Bill Endpoint
       requestBody:
         content:
           application/json:
@@ -1021,7 +1021,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMPESAB2BPaymentsBuyGoodsBuyGoodsEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money MPESA B2B Payments Buy Goods Endpoint
       requestBody:
         content:
           application/json:
@@ -1045,7 +1045,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMPESAB2BPaymentsAccountTopUpAccountTopUpEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money MPESA B2B Payments Account TopUp Endpoint
       requestBody:
         content:
           application/json:
@@ -1069,7 +1069,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMPESAAccountBalanceInquiryPayBillPayBillEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money MPESA Account Balance Inquiry Pay Bill Endpoint
       requestBody:
         content:
           application/json:
@@ -1093,7 +1093,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMPESAAccountBalanceInquiryMobileMoneyMobileMoneyEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money MPESA Account Balance Inquiry Mobile Money Endpoint
       requestBody:
         content:
           application/json:
@@ -1117,7 +1117,7 @@ paths:
     post:
       tags:
       - Mpesa
-      operationId: CblIntegrationsUsecasesMobileMoneyMPESAAccountBalanceInquiryBuyGoodsBuyGoodsEndpoint
+      operationId: Cbl Integrations Usecases Mobile Money MPESA Account Balance Inquiry Buy Goods Endpoint
       requestBody:
         content:
           application/json:
@@ -1141,7 +1141,7 @@ paths:
     post:
       tags:
       - Networking
-      operationId: CblCoreBankingUsecasesNetworkingNetworkingEndpoint
+      operationId: Cbl Core Banking Usecases Networking Endpoint
       requestBody:
         content:
           application/json:
@@ -1165,7 +1165,7 @@ paths:
     post:
       tags:
       - Pesaflows
-      operationId: CblIntegrationsUsecasesPaymentsPesaflowsValidatePaymentValidatePaymentEndpoint
+      operationId: Cbl Integrations Usecases Payments Pesaflows Validate Payment Endpoint
       requestBody:
         content:
           application/json:
@@ -1189,7 +1189,7 @@ paths:
     post:
       tags:
       - Pesaflows
-      operationId: CblIntegrationsUsecasesPaymentsPesaflowsConfirmPaymentConfirmPaymentEndpoint
+      operationId: Cbl Integrations Usecases Payments Pesaflows Confirm Payment Endpoint
       requestBody:
         content:
           application/json:
@@ -1213,7 +1213,7 @@ paths:
     get:
       tags:
       - Pesaflows
-      operationId: CblIntegrationsUsecasesPaymentsPesaflowsCheckPaymentStatusCheckPaymentStatusEndpoint
+      operationId: Cbl Integrations Usecases Payments Pesaflows Check Payment Status Endpoint
       requestBody:
         content:
           '*/*':
@@ -1240,7 +1240,7 @@ paths:
     post:
       tags:
       - Pesalink
-      operationId: CblIntegrationsUsecasesSendMoneyPesalinkTransactionsSystemNotificationSystemNotificationEndpoint
+      operationId: Cbl Integrations Usecases Send Money Pesalink Transactions System Notification Endpoint
       requestBody:
         content:
           application/json:
@@ -1258,7 +1258,7 @@ paths:
     post:
       tags:
       - Pesalink
-      operationId: CblIntegrationsUsecasesSendMoneyPesalinkTransactionsPaymentReversalPaymentReversalEndpoint
+      operationId: Cbl Integrations Usecases Send Money Pesalink Transactions Payment Reversal Endpoint
       requestBody:
         content:
           application/json:
@@ -1276,7 +1276,7 @@ paths:
     post:
       tags:
       - Pesalink
-      operationId: CblIntegrationsUsecasesSendMoneyPesalinkTransactionsPaymentCancellationPaymentCancellationEndpoint
+      operationId: Cbl Integrations Usecases Send Money Pesalink Transactions Payment Cancellation Endpoint
       requestBody:
         content:
           application/json:
@@ -1300,7 +1300,7 @@ paths:
     post:
       tags:
       - Pesalink
-      operationId: CblIntegrationsUsecasesSendMoneyPesalinkTransactionsPaymentActivationPaymentActivationEndpoint
+      operationId: Cbl Integrations Usecases Send Money Pesalink Transactions Payment Activation Endpoint
       requestBody:
         content:
           application/json:
@@ -1318,7 +1318,7 @@ paths:
     post:
       tags:
       - Pesalink
-      operationId: CblIntegrationsUsecasesSendMoneyPesalinkTransactionsGetTransactionRequestStatusGetTransactionRequestStatusEndpoint
+      operationId: Cbl Integrations Usecases Send Money Pesalink Transactions Get Transaction Request Status Endpoint
       requestBody:
         content:
           application/json:
@@ -1687,7 +1687,7 @@ paths:
     post:
       tags:
       - Transactions
-      operationId: CblCore Banking Usecases Transactions Pesalink To Bank Incoming Incoming Endpoint
+      operationId: CblCore Banking Usecases Transactions Pesalink To Bank Incoming Endpoint
       requestBody:
         content:
           application/json:
@@ -1879,7 +1879,7 @@ paths:
     post:
       tags:
       - Transactions
-      operationId: Cbl Core-Banking Usecases Transactions Account To Account Funds Transfer Endpoint
+      operationId: Cbl Core Banking Usecases Transactions Account To Account Funds Transfer Endpoint
       requestBody:
         content:
           application/json:
@@ -1946,7 +1946,7 @@ paths:
     post:
       tags:
       - Webhooks
-      operationId: Cbl Webhooks Usecases Process Webhook Process Webhook Endpoint
+      operationId: Cbl Webhooks Usecases Process Webhook Endpoint
       requestBody:
         content:
           text/plain:
