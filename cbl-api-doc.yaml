@@ -17,7 +17,9 @@ info:
 
     Use the sidebar to explore the available endpoints.'
   version: 1.0.0
-  termsOfService: https://example.com/terms
+  x-logo:
+    url: 'https://creditbank.co.ke/wp-content/uploads/2023/09/Credit-Bank-Logo-01.png'
+    altText: Credit Bank logo
   contact:
     name: API Support
     url: https://github.com/hyveglobal/CBLGatewayDocs
