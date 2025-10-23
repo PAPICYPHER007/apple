@@ -80,7 +80,7 @@ paths:
     post:
       tags:
       - Accounts
-      operationId: Cbl Core Banking Usecases Accounts. Forex Endpoint
+      operationId: Cbl Core Banking Usecases Accounts Forex Endpoint
       requestBody:
         content:
           application/json:
